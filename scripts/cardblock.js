@@ -19,11 +19,7 @@ H5P.CardBlock = (function ($) {
     // Keep provided id.
     this.id = id;
 
-    var url = '';
-    if (this.options.cardAction.protocol !== 'other') {
-      url += this.options.cardAction.protocol;
-    }
-    url += this.options.cardAction.url;
+
   };
 
     
@@ -64,6 +60,14 @@ H5P.CardBlock = (function ($) {
 
 
     if (this.options.cardAction.url && this.options.cardAction.label) {
+
+      var url = '';
+      if (this.options.cardAction.protocol !== 'other') {
+        url += this.options.cardAction.protocol;
+      }
+      url += this.options.cardAction.url;
+
+      
       var cardAction = `<div class="card-action"><a href="card-action" href="${url}" target="_blank">${this.options.cardAction.label}</a>`;
       cardTarget.append(cardAction);
     }
