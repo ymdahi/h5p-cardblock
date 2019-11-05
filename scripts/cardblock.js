@@ -7,8 +7,9 @@ H5P.CardBlock = (function ($) {
   function C(options, id) {
     // Extend defaults with provided options
     this.options = $.extend(true, {}, {
-      cardTitle: 'Hello world!',
-      cardImage: null
+      cardTitle: 'Card Title',
+      cardImage: null,
+      cardText: 'Card Text'
     }, options);
     // Keep provided id.
     this.id = id;
@@ -21,15 +22,28 @@ H5P.CardBlock = (function ($) {
    * @param {jQuery} $container
    */
   C.prototype.attach = function ($container) {
-    // Set class on container to identify it as a greeting card
-    // container.  Allows for styling later.
-    $container.addClass("h5p-cardblock");
+    $container.addClass("h5p-cardblock-container");
+    $container.append('<div class="cardblock"></div>');
+    var cardTarget = $('.cardblock');
+
     // Add image if provided.
     if (this.options.cardImage && this.options.cardImage.path) {
-      $container.append('<img class="card-image" src="' + H5P.getPath(this.options.cardImage.path, this.id) + '">');
+      var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(this.options.cardImage.path, this.id)}"></div>`
+      cardTarget.append(cardMedia);
+      //$cardTarget.append('<div class="card-media"><img class="card-image" src="' + H5P.getPath(this.options.cardImage.path, this.id) + '"></div>');
     }
-    // Add greeting text.
-    $container.append('<div class="card-title">' + this.options.cardTitle + '</div>');
+
+    if (this.options.cardTitle) {
+      cardTarget.append(`<div class="card-body"></div>`);
+      var cardTitle = `<h3 class="card-title">${H5P.getPath(this.options.cardTitle.path, this.id)}</h3>`;
+      $(".card-body").append(cardTitle);
+    }
+
+    if (this.options.cardText) {
+      var cardText = `<p class="card-text">${H5P.getPath(this.options.cardText.path, this.id)}</p>`;
+      $(".card-body").append(cardText);
+    }
+    
   };
  
   return C;

@@ -1,5 +1,66 @@
-.h5p-card {
-    height: 300px;
-    width: 300px;
-    background-color: #CCC;
+.h5p-cardblock-container {
+  display: grid;
+  background-color: #f8f8f8;
+  padding: 20px;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.h5p-cardblock-container > .cardblock {
+  background-color: white;
+  max-width: 300px;
+  border-radius: 4px;
+  min-height: 400px;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)
+}
+
+.h5p-cardblock-container > .cardblock > .card-media > img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.h5p-cardblock-container > .cardblock > .card-body {
+  padding: 15px
+}
+.h5p-cardblock-container > .cardblock > .card-body > h3.card-title {
+  margin: 0;
+}
+.h5p-cardblock-container > .cardblock > .card-body > p.card-text {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.h5p-cardblock-container > .cardblock > .card-action {
+  padding: 0 15px 15px;
+}
+.h5p-cardblock-container > .cardblock > .card-action > a.card-action {
+  display: inline-block;
+  padding: .375rem .75rem;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+}
+
+.h5p-cardblock-container > .cardblock > .card-action > a.card-action:hover,
+.card-action > a.card-action:focus {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+.h5p-cardblock-container > .cardblock > .card-action > a.card-action:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
+}
+
+.h5p-cardblock-container > .cardblock > .card-body > p::-webkit-scrollbar-track {
+	background-color: #CCC;
+}
+.h5p-cardblock-container > .cardblock > .card-body > p::-webkit-scrollbar {
+	width: 5px;
+	background-color: #CCC;
+}
+.h5p-cardblock-container > .cardblock > .card-body > p::-webkit-scrollbar-thumb {
+	background-color: #666;
 }
