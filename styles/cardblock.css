@@ -27,7 +27,7 @@
 .h5p-cardblock-container > .cardblock > .card-body > h3.card-title {
   margin: 0;
 }
-.h5p-cardblock-container > .cardblock > .card-body > p.card-text {
+.h5p-cardblock-container > .cardblock > .card-body > div.card-text {
   max-height: 150px;
   overflow-x: auto;
 }
@@ -54,13 +54,13 @@
   box-shadow: 0 0 0 0.2rem rgba(0,123,255,.5);
 }
 
-.h5p-cardblock-container > .cardblock > .card-body > p::-webkit-scrollbar-track {
+.h5p-cardblock-container > .cardblock > .card-body > div.card-text::-webkit-scrollbar-track {
 	background-color: #CCC;
 }
-.h5p-cardblock-container > .cardblock > .card-body > p::-webkit-scrollbar {
+.h5p-cardblock-container > .cardblock > .card-body > div.card-text::-webkit-scrollbar {
 	width: 5px;
 	background-color: #CCC;
 }
-.h5p-cardblock-container > .cardblock > .card-body > p::-webkit-scrollbar-thumb {
+.h5p-cardblock-container > .cardblock > .card-body > div.card-text::-webkit-scrollbar-thumb {
 	background-color: #666;
 }
