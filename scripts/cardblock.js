@@ -18,9 +18,11 @@ H5P.CardBlock = (function ($) {
     }, options);
     // Keep provided id.
     this.id = id;
-  };
 
     console.log(this.options);
+  };
+
+    
 
   // var url = '';
   // if (this.cardAction.protocol !== 'other') {
