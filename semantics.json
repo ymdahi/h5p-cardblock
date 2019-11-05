@@ -35,11 +35,17 @@
     ]
   },
   {
-    "name": "linkWidget",
+    "name": "cardAction",
     "type": "group",
     "importance": "high",
     "widget": "linkWidget",
     "fields": [
+      {
+        "name": "label",
+        "type": "text",
+        "label": "Button text",
+        "description": "The text for the button"
+      },
       {
         "name": "protocol",
         "type": "select",

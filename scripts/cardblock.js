@@ -9,12 +9,23 @@ H5P.CardBlock = (function ($) {
     this.options = $.extend(true, {}, {
       cardTitle: 'Card Title',
       cardImage: null,
-      cardText: 'Card Text'
+      cardText: 'Card Text',
+      cardAction: {
+        label: '',
+        protocol: '',
+        url: ''
+      }
     }, options);
     // Keep provided id.
     this.id = id;
   };
  
+  var url = '';
+  if (this.options.cardAction.protocol !== 'other') {
+     url += this.options.cardAction.protocol;
+  }
+  url += this.options.cardAction.url;
+
   /**
    * Attach function called by H5P framework to insert H5P content into
    * page
@@ -42,6 +53,15 @@ H5P.CardBlock = (function ($) {
     if (this.options.cardText) {
       var cardText = `<div class="card-text">${this.options.cardText}</div>`;
       $(".card-body").append(cardText);
+    }
+
+
+    //var sanitizedUrl = sanitizeUrlProtocol(url);
+
+
+    if (this.options.cardAction.url && this.options.cardAction.label) {
+      var cardAction = `<div class="card-action"><a href="card-action" href="${url}" target="_blank">${this.options.cardAction.label}</a>`;
+      cardTarget.append(cardAction);
     }
 
   };
