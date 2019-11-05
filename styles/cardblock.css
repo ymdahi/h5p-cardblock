@@ -25,11 +25,14 @@
   padding: 15px
 }
 .h5p-cardblock-container > .cardblock > .card-body > h3.card-title {
-  margin: 0;
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 .h5p-cardblock-container > .cardblock > .card-body > div.card-text {
   max-height: 150px;
   overflow-x: auto;
+  margin-bottom: 10px;
 }
 
 .h5p-cardblock-container > .cardblock > .card-action {
