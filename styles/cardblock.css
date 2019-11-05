@@ -29,7 +29,7 @@
 }
 .h5p-cardblock-container > .cardblock > .card-body > p.card-text {
   max-height: 150px;
-  overflow-y: auto;
+  overflow-x: auto;
 }
 
 .h5p-cardblock-container > .cardblock > .card-action {
