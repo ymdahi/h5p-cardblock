@@ -21,10 +21,10 @@ H5P.CardBlock = (function ($) {
   };
  
   var url = '';
-  if (this.options.protocol !== 'other') {
-     url += this.options.protocol;
+  if (this.cardAction.protocol !== 'other') {
+     url += this.cardAction.protocol;
   }
-  url += this.options.url;
+  url += this.cardAction.url;
 
   /**
    * Attach function called by H5P framework to insert H5P content into
