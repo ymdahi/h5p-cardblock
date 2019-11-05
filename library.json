@@ -3,15 +3,19 @@
   "description": "Displays an image, text, and a button in a bootstrap-inspired card",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 1,
+  "patchVersion": 2,
   "runnable": 1,
   "author": "@ymdahi, Yasin Dahi",
   "license": "cc-by-sa",
   "machineName": "H5P.CardBlock",
+  "coreApi": {
+    "majorVersion": 1,
+    "minorVersion": 0
+  },
   "preloadedJs": [
-    { "path": "cardblock.js" }
+    { "path": "scripts/cardblock.js" }
   ],
   "preloadedCss": [
-    {"path": "cardblock.css"}
+    {"path": "styles/cardblock.css"}
   ]
 }
