@@ -35,15 +35,15 @@ H5P.CardBlock = (function ($) {
 
     if (this.options.cardTitle) {
       cardTarget.append(`<div class="card-body"></div>`);
-      var cardTitle = `<h3 class="card-title">${H5P.getPath(this.options.cardTitle.path, this.id)}</h3>`;
+      var cardTitle = `<h3 class="card-title">${H5P.getPath(this.options.cardTitle, this.id)}</h3>`;
       $(".card-body").append(cardTitle);
     }
 
     if (this.options.cardText) {
-      var cardText = `<p class="card-text">${H5P.getPath(this.options.cardText.path, this.id)}</p>`;
+      var cardText = `<p class="card-text">${H5P.getPath(this.options.cardText, this.id)}</p>`;
       $(".card-body").append(cardText);
     }
-    
+
   };
  
   return C;
