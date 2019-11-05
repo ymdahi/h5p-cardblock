@@ -3,7 +3,7 @@
   "description": "Displays an image, text, and a button in a bootstrap-inspired card",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 8,
+  "patchVersion": 9,
   "runnable": 1,
   "author": "@ymdahi, Yasin Dahi",
   "license": "cc-by-sa",
