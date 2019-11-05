@@ -19,12 +19,14 @@ H5P.CardBlock = (function ($) {
     // Keep provided id.
     this.id = id;
   };
- 
-  var url = '';
-  if (this.cardAction.protocol !== 'other') {
-     url += this.cardAction.protocol;
-  }
-  url += this.cardAction.url;
+
+    console.log(this.options.cardAction);
+
+  // var url = '';
+  // if (this.cardAction.protocol !== 'other') {
+  //    url += this.cardAction.protocol;
+  // }
+  // url += this.cardAction.url;
 
   /**
    * Attach function called by H5P framework to insert H5P content into
