@@ -37,17 +37,19 @@ H5P.CardBlock = (function ($) {
 
       // Add image if provided.
       if (this.options.cards[i].cardImage && this.options.cards[i].cardImage.path) {
-        
         var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(this.options.cards[i].cardImage.path, this.id)}"></div>`;
-
         cardTarget.append(cardMedia);
       }
 
       if (this.options.cards[i].cardTitle) {
-        
         cardTarget.append(`<div class="card-body"></div>`);
         var cardTitle = `<h3 class="card-title">${this.options.cards[i].cardTitle}</h3>`;
         $(".card-body", cardTarget).append(cardTitle);
+      }
+
+      if (this.cards[i].options.cardText) {
+        var cardText = `<div class="card-text">${this.options.cards[i].cardText}</div>`;
+        $(".card-body", cardTarget).append(cardText);
       }
 
     }
