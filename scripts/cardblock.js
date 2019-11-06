@@ -68,6 +68,6 @@ H5P.CardBlock = (function ($) {
 
   //   };
   
-  //   return C;
-  // }
+    return C;
+  
 })(H5P.jQuery);
