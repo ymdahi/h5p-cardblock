@@ -67,8 +67,9 @@ H5P.CardBlock = (function ($) {
       }
       url += this.options.cardAction.url;
 
-      
+
       var cardAction = `<div class="card-action"><a href="card-action" href="${url}" target="_blank">${this.options.cardAction.label}</a>`;
+      
       cardTarget.append(cardAction);
     }
 

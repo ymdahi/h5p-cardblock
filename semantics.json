@@ -1,83 +1,88 @@
 [ 
-  { 
-    "label": "Card title", 
-    "name": "cardTitle", 
-    "type": "text", 
-    "default": "", 
-    "description": "The title of the card"
-  }, 
   {
-    "label": "Card image",
-    "name": "cardImage",
-    "type": "image",
-    "optional": true,
-    "description": "Image shown on card, optional. Without this the card will show just the text."
-  },
-  {
-    "label": "Card text", 
-    "name": "cardText", 
-    "type": "text", 
-    "widget": "html",
-    "importance": "high",
-    "enterMode": "p",
-    "tags": [
-      "strong",
-      "em",
-      "del",
-      "a",
-      "ul",
-      "ol",
-      "h2",
-      "h3",
-      "hr",
-      "pre",
-      "code"
-    ]
-  },
-  {
-    "name": "cardAction",
-    "type": "group",
-    "importance": "high",
-    "widget": "linkWidget",
-    "fields": [
-      {
-        "name": "label",
-        "type": "text",
-        "label": "Button text",
-        "description": "The text for the button"
-      },
-      {
-        "name": "protocol",
-        "type": "select",
-        "importance": "high",
-        "label": "Protocol",
-        "options": [
-          {
-            "value": "http://",
-            "label": "http://"
-          },
-          {
-            "value": "https://",
-            "label": "https://"
-          },
-          {
-            "value": "/",
-            "label": "(root relative)"
-          },
-          {
-            "value": "other",
-            "label": "other"
-          }
-        ],
-        "optional": true,
-        "default": "http://"
-      },
-      {
-        "name": "url",
-        "type": "text",
-        "importance": "high",
-        "label": "URL"
-      }
-    ]
+    "name": "cards",
+    "type": "list",
+    "label": "Cards",
+    "entity": "panels",
+    "max": 6,
+    "min": 1,
+    "field": {
+      "name": "content",
+      "type": "group",
+      "label": "Content",
+      "importance": "high",
+      "entity": "content",
+      "fields": [
+        {
+          "label": "Card image",
+          "name": "cardImage",
+          "type": "image",
+          "optional": true,
+          "description": "Image shown on card, optional. Without this the card will show just the text."
+        },
+        {
+          "label": "Card title", 
+          "name": "cardTitle", 
+          "type": "text", 
+          "default": "", 
+          "description": "The title of the card"
+        },
+        {
+          "name": "cardText",
+          "type": "library",
+          "label": "Content type",
+          "importance": "medium",
+          "entity": "content",
+          "options": [
+            "H5P.AdvancedText 1.1"
+          ]
+        },
+        {
+          "name": "cardAction",
+          "type": "group",
+          "importance": "high",
+          "widget": "linkWidget",
+          "fields": [
+            {
+              "name": "protocol",
+              "type": "select",
+              "importance": "high",
+              "label": "Protocol",
+              "options": [
+                {
+                  "value": "http://",
+                  "label": "http://"
+                },
+                {
+                  "value": "https://",
+                  "label": "https://"
+                },
+                {
+                  "value": "/",
+                  "label": "(root relative)"
+                },
+                {
+                  "value": "other",
+                  "label": "other"
+                }
+              ],
+              "optional": true,
+              "default": "http://"
+            },
+            {
+              "name": "url",
+              "type": "text",
+              "importance": "high",
+              "label": "URL"
+            },
+            {
+              "name": "label",
+              "type": "text",
+              "label": "Button text"
+            }
+          ]
+        }
+      ]
+    }
   }
 ]

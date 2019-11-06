@@ -5,6 +5,7 @@
   "minorVersion": 0,
   "patchVersion": 9,
   "runnable": 1,
+  "fullscreen": 1,
   "author": "@ymdahi, Yasin Dahi",
   "license": "cc-by-sa",
   "machineName": "H5P.CardBlock",
