@@ -18,7 +18,7 @@ H5P.CardBlock = (function ($) {
     for (var i = 0; i < this.options.cards.length; i++) {
       var self = this;
 
-      console.log(self.options.card[i].cardText);
+      console.log(self.options.cards[i].cardText);
     }
 
   };
