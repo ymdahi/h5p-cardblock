@@ -52,6 +52,20 @@ H5P.CardBlock = (function ($) {
         $(".card-body", cardTarget).append(cardText);
       }
 
+      if (this.options.cards[i].cardAction.url && this.options.cards[i].cardAction.label) {
+
+        var url = '';
+        if (this.options.cards[i].cardAction.protocol !== 'other') {
+          url += this.options.cards[i].cardAction.protocol;
+        }
+        url += this.options.cards[i].cardAction.url;
+
+
+        var cardAction = `<div class="card-action"><a href="card-action" href="${url}" target="_blank">${this.options.cards[i].cardAction.label}</a>`;
+
+        cardTarget.append(cardAction);
+      }
+
     }
   };
 
