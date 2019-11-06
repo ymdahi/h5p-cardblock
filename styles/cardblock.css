@@ -14,9 +14,13 @@
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)
 }
 
+.h5p-fullscreen.h5p-cardblock-container > .cardblock {
+  max-height: 470.5px;
+}
+
 .h5p-cardblock-container > .cardblock > .card-media > img {
   width: 100%;
-  max-height: 200px;
+  height: 200px;
   object-fit: cover;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
