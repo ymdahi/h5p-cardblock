@@ -12,62 +12,62 @@ H5P.CardBlock = (function ($) {
     // Keep provided id.
     this.id = id;
 
-    console.log(this);
+    console.log(this.options);
 
   };
 
   
-  for (var i = 0; i < this.options.cards.length; i++) {
+  // for (var i = 0; i < this.options.cards.length; i++) {
 
-    /**
-     * Attach function called by H5P framework to insert H5P content into
-     * page
-     *
-     * @param {jQuery} $container
-     */
-    C.prototype.attach = function ($container) {
-      $container.addClass("h5p-cardblock-container");
-      $container.append('<div class="cardblock"></div>');
-      var cardTarget = $('.cardblock');
+  //   /**
+  //    * Attach function called by H5P framework to insert H5P content into
+  //    * page
+  //    *
+  //    * @param {jQuery} $container
+  //    */
+  //   C.prototype.attach = function ($container) {
+  //     $container.addClass("h5p-cardblock-container");
+  //     $container.append('<div class="cardblock"></div>');
+  //     var cardTarget = $('.cardblock');
 
-      // Add image if provided.
-      if (this.options.cards[i].cardImage && this.options.cards[i].cardImage.path) {
-        var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(this.options.cards[i].cardImage.path, this.id)}"></div>`
-        cardTarget.append(cardMedia);
-        //$cardTarget.append('<div class="card-media"><img class="card-image" src="' + H5P.getPath(this.options.cardImage.path, this.id) + '"></div>');
-      }
+  //     // Add image if provided.
+  //     if (this.options.cards[i].cardImage && this.options.cards[i].cardImage.path) {
+  //       var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(this.options.cards[i].cardImage.path, this.id)}"></div>`
+  //       cardTarget.append(cardMedia);
+  //       //$cardTarget.append('<div class="card-media"><img class="card-image" src="' + H5P.getPath(this.options.cardImage.path, this.id) + '"></div>');
+  //     }
 
-      if (this.options.cards[i].cardTitle) {
-        cardTarget.append(`<div class="card-body"></div>`);
-        var cardTitle = `<h3 class="card-title">${this.options.cards[i].cardTitle}</h3>`;
-        $(".card-body").append(cardTitle);
-      }
+  //     if (this.options.cards[i].cardTitle) {
+  //       cardTarget.append(`<div class="card-body"></div>`);
+  //       var cardTitle = `<h3 class="card-title">${this.options.cards[i].cardTitle}</h3>`;
+  //       $(".card-body").append(cardTitle);
+  //     }
 
-      if (this.options.cardText) {
-        var cardText = `<div class="card-text">${this.options.cards[i].cardText}</div>`;
-        $(".card-body").append(cardText);
-      }
-
-
-      //var sanitizedUrl = sanitizeUrlProtocol(url);
+  //     if (this.options.cardText) {
+  //       var cardText = `<div class="card-text">${this.options.cards[i].cardText}</div>`;
+  //       $(".card-body").append(cardText);
+  //     }
 
 
-      if (this.options.cards[i].cardAction.url && this.options.cards[i].cardAction.label) {
-
-        var url = '';
-        if (this.options.cards[i].cardAction.protocol !== 'other') {
-          url += this.options.cards[i].cardAction.protocol;
-        }
-        url += this.options.cards[i].cardAction.url;
+  //     //var sanitizedUrl = sanitizeUrlProtocol(url);
 
 
-        var cardAction = `<div class="card-action"><a href="card-action" href="${url}" target="_blank">${this.options.cards[i].cardAction.label}</a>`;
+  //     if (this.options.cards[i].cardAction.url && this.options.cards[i].cardAction.label) {
 
-        cardTarget.append(cardAction);
-      }
+  //       var url = '';
+  //       if (this.options.cards[i].cardAction.protocol !== 'other') {
+  //         url += this.options.cards[i].cardAction.protocol;
+  //       }
+  //       url += this.options.cards[i].cardAction.url;
 
-    };
+
+  //       var cardAction = `<div class="card-action"><a href="card-action" href="${url}" target="_blank">${this.options.cards[i].cardAction.label}</a>`;
+
+  //       cardTarget.append(cardAction);
+  //     }
+
+  //   };
   
-    return C;
-  }
+  //   return C;
+  // }
 })(H5P.jQuery);
