@@ -32,8 +32,8 @@ H5P.CardBlock = (function ($) {
 
       console.log(self.options.cards[i].cardText);
 
-      $container.append(`<div class="cardblock-${i + 1}"></div>`);
-      var cardTarget = $(`.cardblock-${i + 1}`);
+      $container.append(`<div class="cardblock card-${i + 1}"></div>`);
+      var cardTarget = $(`.card-${i + 1}`);
 
       // Add image if provided.
       if (this.options.cards[i].cardImage && this.options.cards[i].cardImage.path) {
