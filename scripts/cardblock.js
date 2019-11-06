@@ -13,45 +13,41 @@ H5P.CardBlock = (function ($) {
     this.id = id;
 
     console.log(this.options.cards[0].cardTitle);
-
-    /**
-     * Attach function called by H5P framework to insert H5P content into
-     * page
-     *
-     * @param {jQuery} $container
-     */
-
-    C.prototype.attach = function ($container) {
-
-      $container.addClass("h5p-cardblock-container");
-      
-
-      for (var i = 0; i < this.options.cards.length; i++) {
-        var self = this;
-  
-        console.log(self.options.cards[i].cardText);
-
-        $container.append('<div class="cardblock"></div>');
-        var cardTarget = $('.cardblock');
-
-        // Add image if provided.
-        if (this.options.cards[i].cardImage && this.options.cards[i].cardImage.path) {
-          
-          var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(this.options.cards[i].cardImage.path, this.id)}"></div>`;
-
-          cardTarget.append(cardMedia);
-        }
-
-      }
-      
-      
-    
-    }
-
-    return C;
-    
-
   };
+
+  /**
+   * Attach function called by H5P framework to insert H5P content into
+   * page
+   *
+   * @param {jQuery} $container
+   */
+
+  C.prototype.attach = function ($container) {
+
+    $container.addClass("h5p-cardblock-container");
+    
+
+    for (var i = 0; i < this.options.cards.length; i++) {
+      var self = this;
+
+      console.log(self.options.cards[i].cardText);
+
+      $container.append('<div class="cardblock"></div>');
+      var cardTarget = $('.cardblock');
+
+      // Add image if provided.
+      if (this.options.cards[i].cardImage && this.options.cards[i].cardImage.path) {
+        
+        var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(this.options.cards[i].cardImage.path, this.id)}"></div>`;
+
+        cardTarget.append(cardMedia);
+      }
+
+    }
+  };
+
+  return C;
+
 })(H5P.jQuery);
   
   // for (var i = 0; i < this.options.cards.length; i++) {
