@@ -2,7 +2,8 @@
   display: grid;
   background-color: #f8f8f8;
   padding: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
 }
 
 .h5p-cardblock-container > .cardblock {
