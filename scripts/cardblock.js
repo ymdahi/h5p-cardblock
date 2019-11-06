@@ -32,7 +32,7 @@ H5P.CardBlock = (function ($) {
 
       console.log(self.options.cards[i].cardText);
 
-      $container.append('<div class="cardblock"></div>');
+      $container.append(`<div class="cardblock-${i + 1}"></div>`);
       var cardTarget = $('.cardblock');
 
       // Add image if provided.
