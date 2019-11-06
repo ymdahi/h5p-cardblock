@@ -70,17 +70,20 @@
                   "label": "other"
                 }
               ],
+              "optional": true,
               "default": "http://"
             },
             {
               "name": "url",
               "type": "text",
               "importance": "high",
+              "optional": true,
               "label": "URL"
             },
             {
               "name": "label",
               "type": "text",
+              "optional": true,
               "label": "Button label"
             }
           ]
