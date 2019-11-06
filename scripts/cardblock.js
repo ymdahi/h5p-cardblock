@@ -47,7 +47,7 @@ H5P.CardBlock = (function ($) {
         $(".card-body", cardTarget).append(cardTitle);
       }
 
-      if (this.cards[i].options.cardText) {
+      if (this.options.cards[i].cardText) {
         var cardText = `<div class="card-text">${this.options.cards[i].cardText}</div>`;
         $(".card-body", cardTarget).append(cardText);
       }
