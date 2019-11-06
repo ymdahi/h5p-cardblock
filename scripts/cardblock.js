@@ -7,14 +7,7 @@ H5P.CardBlock = (function ($) {
   function C(options, id) {
     // Extend defaults with provided options
     this.options = $.extend(true, {}, {
-      cardTitle: 'Card Title',
-      cardImage: null,
-      cardText: 'Card Text',
-      cardAction: {
-        label: '',
-        protocol: '',
-        url: ''
-      }
+      cards: []
     }, options);
     // Keep provided id.
     this.id = id;
