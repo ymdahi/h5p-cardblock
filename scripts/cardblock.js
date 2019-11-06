@@ -19,6 +19,7 @@ H5P.CardBlock = (function ($) {
     // Keep provided id.
     this.id = id;
 
+    console.log(this.options);
 
   };
 
@@ -69,7 +70,7 @@ H5P.CardBlock = (function ($) {
 
 
       var cardAction = `<div class="card-action"><a href="card-action" href="${url}" target="_blank">${this.options.cardAction.label}</a>`;
-      
+
       cardTarget.append(cardAction);
     }
 

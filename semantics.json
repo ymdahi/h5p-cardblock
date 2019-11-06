@@ -42,6 +42,7 @@
           "type": "group",
           "importance": "high",
           "widget": "linkWidget",
+          "label": "Button",
           "fields": [
             {
               "name": "protocol",
@@ -78,7 +79,7 @@
             {
               "name": "label",
               "type": "text",
-              "label": "Button text"
+              "label": "Button label"
             }
           ]
         }
