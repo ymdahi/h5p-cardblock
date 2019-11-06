@@ -32,6 +32,7 @@
           "type": "library",
           "label": "Content type",
           "importance": "medium",
+          "optional": true,
           "entity": "content",
           
           "options": [
