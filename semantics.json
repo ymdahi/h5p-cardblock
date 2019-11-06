@@ -33,6 +33,7 @@
           "label": "Content type",
           "importance": "medium",
           "entity": "content",
+          
           "options": [
             "H5P.AdvancedText 1.1"
           ]
@@ -41,6 +42,7 @@
           "name": "cardAction",
           "type": "group",
           "importance": "high",
+          "optional": true,
           "widget": "linkWidget",
           "label": "Button",
           "fields": [
@@ -67,7 +69,6 @@
                   "label": "other"
                 }
               ],
-              "optional": true,
               "default": "http://"
             },
             {
