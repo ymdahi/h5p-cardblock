@@ -11,9 +11,10 @@ H5P.CardBlock = (function ($) {
     }, options);
     // Keep provided id.
     this.id = id;
+    console.log(this.options);
   };
 
-  console.log(this);
+  
 
   /**
    * Attach function called by H5P framework to insert H5P content into
