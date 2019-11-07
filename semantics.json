@@ -18,7 +18,6 @@
           "type": "library",
           "label": "Card",
           "importance": "medium",
-          "entity": "content",
           "options": [
             "H5P.StandardCard 1.0"
           ]
