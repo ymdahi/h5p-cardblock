@@ -11,11 +11,9 @@ H5P.CardBlock = (function ($) {
     }, options);
     // Keep provided id.
     this.id = id;
-    console.log(`from cardblock 0: ${this}`);
-    console.log(`from cardblock 1: ${this.options}`);
+    console.log(this);
   };
 
-  console.log(`from cardblock -1: ${this}`);
   /**
    * Attach function called by H5P framework to insert H5P content into
    * page
@@ -25,7 +23,17 @@ H5P.CardBlock = (function ($) {
 
   CardBlock.prototype.attach = function ($container) {
     $container.addClass("h5p-cardblock-container");
-    console.log(`from cardblock 2: ${this.options}`);
+
+    for (var i = 0; i < this.options.cards.length; i++) {
+      $container.append(`<div class="cardblock card-${i + 1}"></div>`);
+      var cardTarget = $(`.card-${i + 1}`);
+
+      if (this.options.cards[i].cardTitle) {
+        cardTarget.append(`<div class="card-body"></div>`);
+        var cardTitle = `<h3 class="card-title">${this.options.cards[i].cardTitle}</h3>`;
+        $(".card-body", cardTarget).append(cardTitle);
+      }
+    }
   };
 
   // /**
