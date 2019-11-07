@@ -48,6 +48,25 @@ H5P.CardBlock = (function ($) {
         var cardText = `<div class="card-text">${this.options.cards[i].params.cardText.params.text}</div>`;
         $(".card-body", cardTarget).append(cardText);
       }
+
+      // add card action buttons if provided
+      if (this.options.cards[i].params.cardAction.url && this.options.cards[i].params.cardAction.label) {
+
+        var url = '';
+        if (this.options.cards[i].params.cardAction.protocol !== 'other') {
+          url += this.options.cards[i].params.cardAction.protocol;
+        }
+        url += this.options.cards[i].params.cardAction.url;
+
+
+        var cardAction = `<div class="card-action"><a class="card-action" href="${url}" target="_blank">${this.options.cards[i].params.cardAction.label}</a>`;
+
+        cardTarget.append(cardAction);
+
+      } else {
+        cardTarget.addClass('no-action');
+      }
+
     }
   };
 
