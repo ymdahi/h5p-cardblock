@@ -15,6 +15,7 @@ H5P.CardBlock = (function ($) {
     console.log(`from cardblock 1: ${this.options}`);
   };
 
+  console.log(`from cardblock -1: ${this}`);
   /**
    * Attach function called by H5P framework to insert H5P content into
    * page
