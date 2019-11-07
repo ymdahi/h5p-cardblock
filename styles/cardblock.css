@@ -17,6 +17,12 @@
 .h5p-cardblock-container > .cardblock.no-media {
   grid-template-rows: auto 50px;
 }
+.h5p-cardblock-container > .cardblock.no-action {
+  grid-template-rows: 150px auto;
+}
+.h5p-cardblock-container > .cardblock.no-media.no-action {
+  grid-template-rows: auto;
+}
 /* .h5p-fullscreen.h5p-cardblock-container > .cardblock {
   max-height: 470.5px;
 } */
@@ -46,7 +52,12 @@
 .h5p-cardblock-container > .cardblock.no-media > .card-body > div.card-text {
   max-height: 320px;
 }
-
+.h5p-cardblock-container > .cardblock.no-action > .card-body > div.card-text {
+  max-height: 180px;
+}
+.h5p-cardblock-container > .cardblock.no-media.no-action > .card-body > div.card-text {
+  max-height: 300px;
+}
 .h5p-cardblock-container > .cardblock > .card-action {
   padding: 0 15px 15px;
 }
