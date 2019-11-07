@@ -39,6 +39,8 @@ H5P.CardBlock = (function ($) {
       if (this.options.cards[i].cardImage && this.options.cards[i].cardImage.path) {
         var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(this.options.cards[i].cardImage.path, this.id)}"></div>`;
         cardTarget.append(cardMedia);
+      } else {
+        cardTarget.addClass('no-media');
       }
 
       if (this.options.cards[i].cardTitle) {
@@ -64,6 +66,8 @@ H5P.CardBlock = (function ($) {
         var cardAction = `<div class="card-action"><a class="card-action" href="${url}" target="_blank">${this.options.cards[i].cardAction.label}</a>`;
 
         cardTarget.append(cardAction);
+      } else {
+        cardTarget.addClass('no-action');
       }
 
     }

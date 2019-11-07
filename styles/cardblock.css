@@ -9,9 +9,14 @@
 .h5p-cardblock-container > .cardblock {
   background-color: white;
   border-radius: 4px;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  display: grid;
+  grid-template-rows: 150px auto 50px;
 }
 
+.h5p-cardblock-container > .cardblock.no-media {
+  grid-template-rows: auto 50px;
+}
 /* .h5p-fullscreen.h5p-cardblock-container > .cardblock {
   max-height: 470.5px;
 } */
@@ -37,6 +42,9 @@
   overflow-x: auto;
   margin-bottom: 10px;
   padding-right: 10px;
+}
+.h5p-cardblock-container > .cardblock.no-media > .card-body > div.card-text {
+  max-height: 320px;
 }
 
 .h5p-cardblock-container > .cardblock > .card-action {
