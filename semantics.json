@@ -2,7 +2,7 @@
   {
     "name": "cards",
     "type": "list",
-    "label": "Panels",
+    "label": "Cards",
     "entity": "panels",
     "max": 100,
     "min": 1,
