@@ -4,7 +4,7 @@
     "type": "list",
     "label": "Panels",
     "entity": "panels",
-    "max": 6,
+    "max": 100,
     "min": 1,
     "field": {
       "name": "content",
