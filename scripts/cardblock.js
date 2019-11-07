@@ -11,7 +11,7 @@ H5P.CardBlock = (function ($) {
     }, options);
     // Keep provided id.
     this.id = id;
-    console.log(`from cardblock: ${this.options}`);
+    console.log(`from cardblock 1: ${this.options}`);
   };
 
   /**
@@ -23,7 +23,7 @@ H5P.CardBlock = (function ($) {
 
   CardBlock.prototype.attach = function ($container) {
     $container.addClass("h5p-cardblock-container");
-    console.log(`from cardblock: ${this.options}`);
+    console.log(`from cardblock 2: ${this.options}`);
   };
 
   // /**
