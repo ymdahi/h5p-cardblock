@@ -11,7 +11,7 @@ H5P.CardBlock = (function ($) {
     }, options);
     // Keep provided id.
     this.id = id;
-    console.log(this);
+    console.log(this.options.cards);
   };
 
   /**
