@@ -13,6 +13,8 @@ H5P.CardBlock = (function ($) {
     this.id = id;
   };
 
+  console.log(this);
+
   /**
    * Attach function called by H5P framework to insert H5P content into
    * page
@@ -20,92 +22,34 @@ H5P.CardBlock = (function ($) {
    * @param {jQuery} $container
    */
 
-  C.prototype.attach = function ($container) {
+  // C.prototype.attach = function ($container) {
 
-    $container.addClass("h5p-cardblock-container");
+  //   $container.addClass("h5p-cardblock-container");
     
 
-    for (var i = 0; i < this.options.cards.length; i++) {
+  //   for (var i = 0; i < this.options.cards.length; i++) {
 
-      $container.append(`<div class="cardblock card-${i + 1}"></div>`);
-      var cardTarget = $(`.card-${i + 1}`);
-
-      // Add image if provided.
-      if (this.options.cards[i].cardImage && this.options.cards[i].cardImage.path) {
-        var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(this.options.cards[i].cardImage.path, this.id)}"></div>`;
-        cardTarget.append(cardMedia);
-      } else {
-        cardTarget.addClass('no-media');
-      }
-
-      if (this.options.cards[i].cardTitle) {
-        cardTarget.append(`<div class="card-body"></div>`);
-        var cardTitle = `<h3 class="card-title">${this.options.cards[i].cardTitle}</h3>`;
-        $(".card-body", cardTarget).append(cardTitle);
-      }
-
-      if (this.options.cards[i].cardText) {
-        var cardText = `<div class="card-text">${this.options.cards[i].cardText.params.text}</div>`;
-        $(".card-body", cardTarget).append(cardText);
-      }
-
-      if (this.options.cards[i].cardAction.url && this.options.cards[i].cardAction.label) {
-
-        var url = '';
-        if (this.options.cards[i].cardAction.protocol !== 'other') {
-          url += this.options.cards[i].cardAction.protocol;
-        }
-        url += this.options.cards[i].cardAction.url;
-
-
-        var cardAction = `<div class="card-action"><a class="card-action" href="${url}" target="_blank">${this.options.cards[i].cardAction.label}</a>`;
-
-        cardTarget.append(cardAction);
-      } else {
-        cardTarget.addClass('no-action');
-      }
-
-    }
-  };
-
-  return C;
-
-})(H5P.jQuery);
-  
-  // for (var i = 0; i < this.options.cards.length; i++) {
-
-  //   /**
-  //    * Attach function called by H5P framework to insert H5P content into
-  //    * page
-  //    *
-  //    * @param {jQuery} $container
-  //    */
-  //   C.prototype.attach = function ($container) {
-  //     $container.addClass("h5p-cardblock-container");
-  //     $container.append('<div class="cardblock"></div>');
-  //     var cardTarget = $('.cardblock');
+  //     $container.append(`<div class="cardblock card-${i + 1}"></div>`);
+  //     var cardTarget = $(`.card-${i + 1}`);
 
   //     // Add image if provided.
   //     if (this.options.cards[i].cardImage && this.options.cards[i].cardImage.path) {
-  //       var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(this.options.cards[i].cardImage.path, this.id)}"></div>`
+  //       var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(this.options.cards[i].cardImage.path, this.id)}"></div>`;
   //       cardTarget.append(cardMedia);
-  //       //$cardTarget.append('<div class="card-media"><img class="card-image" src="' + H5P.getPath(this.options.cardImage.path, this.id) + '"></div>');
+  //     } else {
+  //       cardTarget.addClass('no-media');
   //     }
 
   //     if (this.options.cards[i].cardTitle) {
   //       cardTarget.append(`<div class="card-body"></div>`);
   //       var cardTitle = `<h3 class="card-title">${this.options.cards[i].cardTitle}</h3>`;
-  //       $(".card-body").append(cardTitle);
+  //       $(".card-body", cardTarget).append(cardTitle);
   //     }
 
-  //     if (this.options.cardText) {
-  //       var cardText = `<div class="card-text">${this.options.cards[i].cardText}</div>`;
-  //       $(".card-body").append(cardText);
+  //     if (this.options.cards[i].cardText) {
+  //       var cardText = `<div class="card-text">${this.options.cards[i].cardText.params.text}</div>`;
+  //       $(".card-body", cardTarget).append(cardText);
   //     }
-
-
-  //     //var sanitizedUrl = sanitizeUrlProtocol(url);
-
 
   //     if (this.options.cards[i].cardAction.url && this.options.cards[i].cardAction.label) {
 
@@ -116,13 +60,16 @@ H5P.CardBlock = (function ($) {
   //       url += this.options.cards[i].cardAction.url;
 
 
-  //       var cardAction = `<div class="card-action"><a href="card-action" href="${url}" target="_blank">${this.options.cards[i].cardAction.label}</a>`;
+  //       var cardAction = `<div class="card-action"><a class="card-action" href="${url}" target="_blank">${this.options.cards[i].cardAction.label}</a>`;
 
   //       cardTarget.append(cardAction);
+  //     } else {
+  //       cardTarget.addClass('no-action');
   //     }
 
-  //   };
-  
-//     return C;
-  
-// })(H5P.jQuery);
+  //   }
+  // };
+
+  return C;
+
+})(H5P.jQuery);
