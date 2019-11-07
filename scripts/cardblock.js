@@ -4,7 +4,7 @@ H5P.CardBlock = (function ($) {
   /**
    * Constructor function.
    */
-  function C(options, id) {
+  function CardBlock(options, id) {
     // Extend defaults with provided options
     this.options = $.extend(true, {}, {
       cards: []
@@ -14,7 +14,17 @@ H5P.CardBlock = (function ($) {
     console.log(`from cardblock: ${this.options}`);
   };
 
-  
+  /**
+   * Attach function called by H5P framework to insert H5P content into
+   * page
+   *
+   * @param {jQuery} $container
+   */
+
+  CardBlock.prototype.attach = function ($container) {
+    $container.addClass("h5p-cardblock-container");
+    console.log(`from cardblock: ${this.options}`);
+  };
 
   // /**
   //  * Attach function called by H5P framework to insert H5P content into
