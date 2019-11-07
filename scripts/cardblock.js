@@ -11,8 +11,6 @@ H5P.CardBlock = (function ($) {
     }, options);
     // Keep provided id.
     this.id = id;
-
-    console.log(this.options);
   };
 
   /**
@@ -28,9 +26,6 @@ H5P.CardBlock = (function ($) {
     
 
     for (var i = 0; i < this.options.cards.length; i++) {
-      var self = this;
-
-      console.log(self.options.cards[i].cardText);
 
       $container.append(`<div class="cardblock card-${i + 1}"></div>`);
       var cardTarget = $(`.card-${i + 1}`);
