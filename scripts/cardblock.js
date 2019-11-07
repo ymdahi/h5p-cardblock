@@ -11,17 +11,17 @@ H5P.CardBlock = (function ($) {
     }, options);
     // Keep provided id.
     this.id = id;
-    console.log(this.options);
+    console.log(`from cardblock: ${this.options}`);
   };
 
   
 
-  /**
-   * Attach function called by H5P framework to insert H5P content into
-   * page
-   *
-   * @param {jQuery} $container
-   */
+  // /**
+  //  * Attach function called by H5P framework to insert H5P content into
+  //  * page
+  //  *
+  //  * @param {jQuery} $container
+  //  */
 
   // C.prototype.attach = function ($container) {
 
