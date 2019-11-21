@@ -43,8 +43,11 @@ H5P.CardBlock = (function ($) {
 
       // // add card title if provided
       if (currentCard.params.cardTitle) {
-        var cardBody = '<div class="card-body"></div>';
-        var cardTitle = '<h3 class="card-title">' + currentCard.params.cardTitle + '</h3>';
+        // var cardBody = '<div class="card-body"></div>';
+        // var cardTitle = '<h3 class="card-title">' + currentCard.params.cardTitle + '</h3>';
+
+        var cardBody = $('<div></div>');
+        var cardTitle = $('<h3>Whatever</h3>');
         cardBody = cardBody.add(cardTitle);
 
         currentCardBlock.append(cardBody);
