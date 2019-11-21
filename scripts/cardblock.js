@@ -46,8 +46,8 @@ H5P.CardBlock = (function ($) {
         var cardTitle = $('<h3 class="card-title">' + currentCard.params.cardTitle 
           + '</h3>');
         cardBlock.append(cardBody);
-        cardBody.append(cardText);
         cardBody.append(cardTitle);
+        cardBody.append(cardText);
       }
 
       // add card action buttons if provided
