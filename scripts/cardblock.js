@@ -48,7 +48,7 @@ H5P.CardBlock = (function ($) {
         //cardBody = cardBody.add(cardTitle);
 
         currentCardBlock.append(cardBody);
-        cardBody.after(cardTitle);
+        cardBody.append(cardTitle);
       }
 
       // // add card text
