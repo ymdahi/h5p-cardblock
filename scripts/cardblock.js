@@ -38,20 +38,16 @@ H5P.CardBlock = (function ($) {
         cardBlock.addClass('no-media');
       }
 
-      // add card title if provided
+      // add card title (optional) and card body text (required)
       if (currentCard.params.cardTitle) {
         var cardBody = $('<div class="card-body"></div>');
+        var cardText = $('<div class="card-text">' + currentCard.params.cardText.params.text 
+          + '</div>');
         var cardTitle = $('<h3 class="card-title">' + currentCard.params.cardTitle 
           + '</h3>');
         cardBlock.append(cardBody);
+        cardBody.append(cardText);
         cardBody.append(cardTitle);
-      }
-
-      // add card text
-      if (currentCard.params.cardText) {
-        var cardText = $('<div class="card-text">' + currentCard.params.cardText.params.text 
-          + '</div>');
-        $('.card-body', cardBlock).append(cardText);
       }
 
       // add card action buttons if provided
