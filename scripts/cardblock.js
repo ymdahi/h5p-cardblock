@@ -59,26 +59,23 @@ H5P.CardBlock = (function ($) {
         $('.card-body', cardBlock).append(cardText);
       }
 
-      // // add card action buttons if provided
-      // if (currentCard.params.cardAction.url && currentCard.params.cardAction.label) {
+      // add card action buttons if provided
+      if (currentCard.params.cardAction.url && currentCard.params.cardAction.label) {
 
-      //   var url = '';
-      //   if (currentCard.params.cardAction.protocol !== 'other') {
-      //     url += currentCard.params.cardAction.protocol;
-      //   }
-      //   url += currentCard.params.cardAction.url;
+        var url = '';
+        if (currentCard.params.cardAction.protocol !== 'other') {
+          url += currentCard.params.cardAction.protocol;
+        }
+        url += currentCard.params.cardAction.url;
 
+        var cardAction = $('<div class="card-action"><a class="card-action" href="' 
+          + url + '" target="_blank">' + currentCard.params.cardAction.label + '</a>');
+        cardBlock.append(cardAction);
 
-      //   var cardAction = `<div class="card-action"><a class="card-action" href="${url}" target="_blank">${currentCard.params.cardAction.label}</a>`;
-
-      //   $('.cardblock').append(cardAction);
-
-      // } else {
-      //   $('.cardblock').addClass('no-action');
-      // }
-
+      } else {
+        cardBlock.addClass('no-action');
+      }
     }
-
   };
 
   return CardBlock;
