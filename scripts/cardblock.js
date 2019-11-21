@@ -22,11 +22,12 @@ H5P.CardBlock = (function ($) {
 
   CardBlock.prototype.attach = function ($container) {
     $container.addClass("h5p-cardblock-container");
+    var cardContainer;
 
     for (var i = 0; i < this.options.cards.length; i++) {
       var currentCard = this.options.cards[i];
       var cardContainer = '<div class="cardblock"></div>';
-      var cCard = $container.append(cardContainer);
+      $container.append(cardContainer);
       
       //var cardTarget = $(`.card-${i + 1}`);
 
