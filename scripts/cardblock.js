@@ -24,41 +24,44 @@ H5P.CardBlock = (function ($) {
     $container.addClass("h5p-cardblock-container");
 
     for (var i = 0; i < this.options.cards.length; i++) {
-      $container.append(`<div class="cardblock card-${i + 1}"></div>`);
-      var cardTarget = $(`.card-${i + 1}`);
+      var currentCard = this.options.cards[i];
+      var cardContainer = '<div class="cardblock card-' + (i + 1) + '"></div>';
+      $container.append(cardContainer);
+      
+      //var cardTarget = $(`.card-${i + 1}`);
 
       // Add card image if provided.
-      if (this.options.cards[i].params.cardImage && this.options.cards[i].params.cardImage.path) {
-        var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(this.options.cards[i].params.cardImage.path, this.id)}"></div>`;
-        cardTarget.append(cardMedia);
+      if (currentCard.params.cardImage && currentCard.params.cardImage.path) {
+        var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(currentCard.params.cardImage.path, this.id)}"></div>`;
+        cardContainer.append(cardMedia);
       } else {
-        cardTarget.addClass('no-media');
+        cardContainer.addClass('no-media');
       }
 
       // add card title if provided
-      if (this.options.cards[i].params.cardTitle) {
-        cardTarget.append(`<div class="card-body"></div>`);
-        var cardTitle = `<h3 class="card-title">${this.options.cards[i].params.cardTitle}</h3>`;
-        $(".card-body", cardTarget).append(cardTitle);
+      if (currentCard.params.cardTitle) {
+        cardContainer.append(`<div class="card-body"></div>`);
+        var cardTitle = `<h3 class="card-title">${currentCard.params.cardTitle}</h3>`;
+        $(".card-body").append(cardTitle);
       }
 
       // add card text
-      if (this.options.cards[i].params.cardText) {
-        var cardText = `<div class="card-text">${this.options.cards[i].params.cardText.params.text}</div>`;
-        $(".card-body", cardTarget).append(cardText);
+      if (currentCard.params.cardText) {
+        var cardText = `<div class="card-text">${currentCard.params.cardText.params.text}</div>`;
+        $(".card-body").append(cardText);
       }
 
       // add card action buttons if provided
-      if (this.options.cards[i].params.cardAction.url && this.options.cards[i].params.cardAction.label) {
+      if (currentCard.params.cardAction.url && currentCard.params.cardAction.label) {
 
         var url = '';
-        if (this.options.cards[i].params.cardAction.protocol !== 'other') {
-          url += this.options.cards[i].params.cardAction.protocol;
+        if (currentCard.params.cardAction.protocol !== 'other') {
+          url += currentCard.params.cardAction.protocol;
         }
-        url += this.options.cards[i].params.cardAction.url;
+        url += currentCard.params.cardAction.url;
 
 
-        var cardAction = `<div class="card-action"><a class="card-action" href="${url}" target="_blank">${this.options.cards[i].params.cardAction.label}</a>`;
+        var cardAction = `<div class="card-action"><a class="card-action" href="${url}" target="_blank">${currentCard.params.cardAction.label}</a>`;
 
         cardTarget.append(cardAction);
 
