@@ -45,7 +45,7 @@ H5P.CardBlock = (function ($) {
       if (currentCard.params.cardTitle) {
         var cardBody = '<div class="card-body"></div>';
         var cardTitle = '<h3 class="card-title">' + currentCard.params.cardTitle + '</h3>';
-        var cardBody = cardBody.add(cardTitle);
+        cardBody = cardBody.add(cardTitle);
 
         currentCardBlock.append(cardBody);
       }
