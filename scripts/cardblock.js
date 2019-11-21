@@ -40,7 +40,7 @@ H5P.CardBlock = (function ($) {
 
       // add card title if provided
       if (currentCard.params.cardTitle) {
-        cardContainer.append(`<div class="card-body"></div>`);
+        $('.cardblock').append(`<div class="card-body"></div>`);
         var cardTitle = `<h3 class="card-title">${currentCard.params.cardTitle}</h3>`;
         $(".card-body").append(cardTitle);
       }
@@ -63,10 +63,10 @@ H5P.CardBlock = (function ($) {
 
         var cardAction = `<div class="card-action"><a class="card-action" href="${url}" target="_blank">${currentCard.params.cardAction.label}</a>`;
 
-        cardTarget.append(cardAction);
+        $('.cardblock').append(cardAction);
 
       } else {
-        cardTarget.addClass('no-action');
+        $('.cardblock').addClass('no-action');
       }
 
     }
