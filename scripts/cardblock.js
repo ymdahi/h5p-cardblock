@@ -33,43 +33,44 @@ H5P.CardBlock = (function ($) {
       // Add card image if provided.
       if (currentCard.params.cardImage && currentCard.params.cardImage.path) {
         var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(currentCard.params.cardImage.path, this.id)}"></div>`;
-        cCard.append(cardMedia);
+        cardContainer.append(cardMedia);
       } else {
-        cCard.addClass('no-media');
+        cardContainer.addClass('no-media');
       }
 
-      // add card title if provided
-      if (currentCard.params.cardTitle) {
-        $('.cardblock').append(`<div class="card-body"></div>`);
-        var cardTitle = `<h3 class="card-title">${currentCard.params.cardTitle}</h3>`;
-        $(".card-body").append(cardTitle);
-      }
+      // // add card title if provided
+      // if (currentCard.params.cardTitle) {
+      //   $('.cardblock').append(`<div class="card-body"></div>`);
+      //   var cardTitle = `<h3 class="card-title">${currentCard.params.cardTitle}</h3>`;
+      //   $(".card-body").append(cardTitle);
+      // }
 
-      // add card text
-      if (currentCard.params.cardText) {
-        var cardText = `<div class="card-text">${currentCard.params.cardText.params.text}</div>`;
-        $(".card-body").append(cardText);
-      }
+      // // add card text
+      // if (currentCard.params.cardText) {
+      //   var cardText = `<div class="card-text">${currentCard.params.cardText.params.text}</div>`;
+      //   $(".card-body").append(cardText);
+      // }
 
-      // add card action buttons if provided
-      if (currentCard.params.cardAction.url && currentCard.params.cardAction.label) {
+      // // add card action buttons if provided
+      // if (currentCard.params.cardAction.url && currentCard.params.cardAction.label) {
 
-        var url = '';
-        if (currentCard.params.cardAction.protocol !== 'other') {
-          url += currentCard.params.cardAction.protocol;
-        }
-        url += currentCard.params.cardAction.url;
+      //   var url = '';
+      //   if (currentCard.params.cardAction.protocol !== 'other') {
+      //     url += currentCard.params.cardAction.protocol;
+      //   }
+      //   url += currentCard.params.cardAction.url;
 
 
-        var cardAction = `<div class="card-action"><a class="card-action" href="${url}" target="_blank">${currentCard.params.cardAction.label}</a>`;
+      //   var cardAction = `<div class="card-action"><a class="card-action" href="${url}" target="_blank">${currentCard.params.cardAction.label}</a>`;
 
-        $('.cardblock').append(cardAction);
+      //   $('.cardblock').append(cardAction);
 
-      } else {
-        $('.cardblock').addClass('no-action');
-      }
+      // } else {
+      //   $('.cardblock').addClass('no-action');
+      // }
 
     }
+
   };
 
   return CardBlock;
