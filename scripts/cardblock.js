@@ -26,7 +26,7 @@ H5P.CardBlock = (function ($) {
 
     for (var i = 0; i < this.options.cards.length; i++) {
       var currentCard = this.options.cards[i];
-      var cardContainer = '<div class="cardblock"></div>';
+      cardContainer = '<div class="cardblock"></div>';
       $container.append(cardContainer);
       
       //var cardTarget = $(`.card-${i + 1}`);
