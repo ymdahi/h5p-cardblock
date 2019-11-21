@@ -26,13 +26,8 @@ H5P.CardBlock = (function ($) {
 
     for (var i = 0; i < this.options.cards.length; i++) {
       var currentCard = this.options.cards[i];
-      cardBlock = $('<div class="cardblock card-' + i + '"></div>');
-      $container.append(cardBlock);
-      
-      
-      //var currentCardBlock = $('.card-' + i);
-      
-      //var cardTarget = $(`.card-${i + 1}`);
+      cardBlock = $('<div class="cardblock"></div>');
+      $container.append(cardBlock);   
 
       // Add card image if provided.
       if (currentCard.params.cardImage && currentCard.params.cardImage.path) {
@@ -43,7 +38,7 @@ H5P.CardBlock = (function ($) {
         cardBlock.addClass('no-media');
       }
 
-      // // add card title if provided
+      // add card title if provided
       if (currentCard.params.cardTitle) {
         var cardBody = $('<div class="card-body"></div>');
         var cardTitle = $('<h3 class="card-title">' + currentCard.params.cardTitle 
