@@ -36,7 +36,8 @@ H5P.CardBlock = (function ($) {
 
       // Add card image if provided.
       if (currentCard.params.cardImage && currentCard.params.cardImage.path) {
-        var cardMedia = $('<div class="card-media"><img class="card-image" src="' + H5P.getPath(currentCard.params.cardImage.path, this.id) +'"></div>');
+        var cardMedia = $('<div class="card-media"><img class="card-image" src="'
+          + H5P.getPath(currentCard.params.cardImage.path, this.id) +'"></div>');
         cardContainer.append(cardMedia);
       } else {
         cardContainer.addClass('no-media');
@@ -45,18 +46,18 @@ H5P.CardBlock = (function ($) {
       // // add card title if provided
       if (currentCard.params.cardTitle) {
         var cardBody = $('<div class="card-body"></div>');
-        var cardTitle = $('<h3 class="card-title">' + currentCard.params.cardTitle + '</h3>');
-        //cardBody = cardBody.add(cardTitle);
-
+        var cardTitle = $('<h3 class="card-title">' + currentCard.params.cardTitle 
+          + '</h3>');
         cardContainer.append(cardBody);
         cardBody.append(cardTitle);
       }
 
-      // // add card text
-      // if (currentCard.params.cardText) {
-      //   var cardText = `<div class="card-text">${currentCard.params.cardText.params.text}</div>`;
-      //   $(".card-body").append(cardText);
-      // }
+      // add card text
+      if (currentCard.params.cardText) {
+        var cardText = $('<div class="card-text">' + currentCard.params.cardText.params.text 
+          + '</div>');
+        ('.card-body').append(cardText);
+      }
 
       // // add card action buttons if provided
       // if (currentCard.params.cardAction.url && currentCard.params.cardAction.label) {
