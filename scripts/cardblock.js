@@ -35,9 +35,9 @@ H5P.CardBlock = (function ($) {
       if (currentCard.params.cardImage && currentCard.params.cardImage.path) {
         var cardMedia = `<div class="card-media"><img class="card-image" src="${H5P.getPath(currentCard.params.cardImage.path, this.id)}"></div>`;
         console.log(cardContainer);
-        $('.cardblock').append(cardMedia);
+        $('.cardblock .card-' + i).append(cardMedia);
       } else {
-        $('.cardblock').addClass('no-media');
+        $('.cardblock .card-' + i).addClass('no-media');
       }
 
       // // add card title if provided
