@@ -41,11 +41,13 @@ H5P.CardBlock = (function ($) {
       }
 
       // // add card title if provided
-      // if (currentCard.params.cardTitle) {
-      //   $('.cardblock').append(`<div class="card-body"></div>`);
-      //   var cardTitle = `<h3 class="card-title">${currentCard.params.cardTitle}</h3>`;
-      //   $(".card-body").append(cardTitle);
-      // }
+      if (currentCard.params.cardTitle) {
+        var cardBody = '<div class="card-body"></div>';
+        var cardTitle = '<h3 class="card-title">' + currentCard.params.cardTitle + '</h3>';
+        cardBody.append(cardTitle);
+
+        $('.card-' + i).append(cardBody);
+      }
 
       // // add card text
       // if (currentCard.params.cardText) {
