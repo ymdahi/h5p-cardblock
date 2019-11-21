@@ -7,7 +7,7 @@
   "runnable": 1,
   "fullscreen": 0,
   "author": "@ymdahi, Yasin Dahi",
-  "license": "cc-by-sa",
+  "license": "MIT",
   "machineName": "H5P.CardBlock",
   "coreApi": {
     "majorVersion": 1,
