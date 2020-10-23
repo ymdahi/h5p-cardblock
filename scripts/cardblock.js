@@ -34,11 +34,9 @@ H5P.CardBlock = (function ($) {
         // var cardMedia = $('<div class="card-media"><img class="card-image" src="'
         //   + H5P.getPath(currentCard.params.cardImage.path, this.id) +'"></div>');
         // cardBlock.append(cardMedia);
-
         let cardMedia = $('<div class="card-media"></div>');
         cardBlock.append(cardMedia);
-        cardMedia.css('background-image',H5P.getPath(currentCard.params.cardImage.path, this.id));
-        
+        cardMedia.css('background-image', 'url("' + H5P.getPath(currentCard.params.cardImage.path, this.id) + '")');        
       } else {
         cardBlock.addClass('no-media');
       }
